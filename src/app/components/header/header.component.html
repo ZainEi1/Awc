@@ -1,0 +1,73 @@
+<header class="el-header header-bar">
+    <div class="header-bar-logo"><img src="../../../assets/images/logo-awc.png"></div>
+    <div class="header-bar-right">
+       <div class="el-dropdown header-bar-info">
+          <span class="el-dropdown-link el-tooltip__trigger el-tooltip__trigger" id="el-id-654-5" (click)="toggleMaunal()" role="button" tabindex="0" aria-controls="el-id-654-6" aria-expanded="false" aria-haspopup="menu">
+             <svg width="1.2em" height="1.2em" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="icon-operation-manual">
+                <path fill-rule="evenodd" d="M32.225 18.369a.777.777 0 0 1 1.047.35l-.003-.001c.448.9.879 2.055.682 3.796-.492 4.346-4.16 7.562-8.402 7.562a8 8 0 0 1-.965-.055c-4.637-.534-7.978-4.768-7.449-9.44.499-4.407 4.267-7.65 8.584-7.557v-.004q.003-.25.003-.5V9.97l.002-2.55c0-.35-.01-.692-.2-1-.269-.433-.66-.673-1.163-.615-1.95.228-3.857.647-5.695 1.36-1.033.4-1.98.961-2.914 1.55-.116.072-.11.165-.105.258l.002.059v17.227c0 .772-.5 1.182-1.252 1.028a2.4 2.4 0 0 1-.92-.37c-1.567-1.091-3.324-1.725-5.154-2.187-.834-.212-1.682-.344-2.53-.476q-.45-.069-.9-.143c-1.565-.261-2.864-1.673-2.87-3.326-.01-2.207-.01-4.413-.01-6.62v-.662q0-.935-.006-1.868c-.01-1.572-.018-3.144.034-4.714.058-1.74 1.61-3.16 3.466-2.888 1.498.218 2.982.48 4.434.92 1.572.479 3.074 1.114 4.435 2.055.239.167.473.197.72.026 1.567-1.08 3.307-1.77 5.126-2.268 1.209-.33 2.438-.552 3.681-.716.806-.106 1.555-.013 2.22.46.852.605 1.354 1.448 1.364 2.5.019 2.09.019 2.198.018 3.02v3.677c-.001.54-.378.953-.874.96a.8.8 0 0 1-.219-.026 1 1 0 0 1-.084-.005c-3.782-.435-7.21 2.312-7.643 6.123s2.295 7.265 6.077 7.7q.396.046.787.046c3.46 0 6.453-2.624 6.854-6.168.151-1.329-.164-2.185-.526-2.913a.79.79 0 0 1 .348-1.055m-18.55 6.563c.048.043.097.087.153.056.069-.037.058-.111.047-.182a1 1 0 0 1-.008-.073q.004-3.908.003-7.816v-2.045q0-2.927-.002-5.855 0-.03.002-.058c.006-.086.012-.172-.096-.236q-.257-.154-.512-.311c-.548-.337-1.097-.674-1.687-.937-1.965-.877-4.029-1.378-6.156-1.63-1.04-.121-1.624.391-1.624 1.415q-.003 6.709.005 13.418c0 .869.67 1.605 1.532 1.7 1.33.148 2.644.388 3.935.74 1.518.414 2.988.957 4.35 1.768q.03.02.058.046m-2.272-13.398c-1.555-.597-3.167-.974-4.805-1.247a.896.896 0 0 0-1.017.736c-.075.53.237.963.76 1.047 1.505.243 2.98.599 4.411 1.132l.066.025c.116.045.23.09.344.076.422.003.75-.23.881-.616.164-.48-.089-.94-.641-1.153M9.07 15.59c-.798-.228-1.612-.376-2.43-.505-.502-.079-.97.214-1.054.67-.1.529.182.967.71 1.08.262.057.526.105.79.153q.324.059.65.124c.25.05.5.11.74.165l.302.07q.063-.009.116-.013c.064-.006.118-.012.168-.027a.885.885 0 0 0 .647-.846c.004-.42-.23-.754-.64-.872zm16.302 5.044c-.515-.003-.884.388-.885.936v3.119q-.002.793 0 1.586c.002.52.384.92.875.924.508.004.9-.395.901-.927q.002-2.351 0-4.704c0-.544-.373-.93-.89-.934m-1.18-2.7c-.003-.655.536-1.204 1.178-1.204.657 0 1.194.552 1.19 1.221a1.184 1.184 0 1 1-2.368-.018" clip-rule="evenodd"></path>
+             </svg>
+          </span> 
+          <div class="el-scrollbar__wrap scrollbar__wrap_manual el-scrollbar__wrap--hidden-default" *ngIf="operationManual">
+            <div class="el-scrollbar__view el-dropdown__list" style="">
+               <ul class="el-dropdown-menu" tabindex="-1" role="menu" aria-labelledby="el-id-1494-0" id="el-id-1494-1" style="outline: none;">
+                  
+                  <li class="el-dropdown-menu__item">
+                     Agent Introduction
+                  </li>
+                  
+                  <li class="el-dropdown-menu__item">
+                     Fraud Tools Introduction
+                  </li>
+               </ul>
+            </div>
+         </div>
+       </div>
+       <div class="el-dropdown header-bar-lang">
+          <span class="el-dropdown-link el-tooltip__trigger el-tooltip__trigger" (click)="togglelanguageManual()" id="el-id-654-9" role="button" tabindex="0" aria-controls="el-id-654-10" aria-expanded="false" aria-haspopup="menu">
+             English 
+             <i class="el-icon el-icon-arrow-down el-icon--right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                   <path fill="currentColor" d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"></path>
+                </svg>
+             </i>
+          </span>
+          <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default scrollbar__wrap_language" *ngIf="languageManual">
+            <div class="el-scrollbar__view el-dropdown__list" style="">
+               <ul class="el-dropdown-menu" tabindex="-1" role="menu" aria-labelledby="el-id-1494-4" id="el-id-1494-5" style="outline: none;">
+                  
+                  <li class="el-dropdown-menu__item">
+                     English
+                  </li>
+                  
+                  <li class="el-dropdown-menu__item">
+                     中文
+                  </li>
+                  
+                  <li class="el-dropdown-menu__item">
+                     日本語
+                  </li>
+                  
+                  <li class="el-dropdown-menu__item">
+                     ภาษาไทย
+                  </li>
+                  
+                  <li class="el-dropdown-menu__item">
+                     Tiếng Việt
+                  </li>
+               </ul>
+            </div>
+         </div>
+       </div>
+       <div class="header-bar-user">
+          <i class="el-icon el-icon-user">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                <path fill="currentColor" d="M512 512a192 192 0 1 0 0-384 192 192 0 0 0 0 384zm0 64a256 256 0 1 1 0-512 256 256 0 0 1 0 512zm320 320v-96a96 96 0 0 0-96-96H288a96 96 0 0 0-96 96v96a32 32 0 1 1-64 0v-96a160 160 0 0 1 160-160h448a160 160 0 0 1 160 160v96a32 32 0 1 1-64 0z"></path>
+             </svg>
+          </i>
+          <span class="header-bar-user-name">betx365stg</span><span class="header-bar-user-badge user-badge user-badge-ma">MA</span>
+       </div>
+       <button aria-disabled="false" type="button" class="el-button header-bar-logout btn--xs">
+          <span class="">Log Out</span>
+       </button>
+    </div>
+ </header>

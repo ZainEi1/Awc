@@ -1,0 +1,2389 @@
+ 
+       <div class="profile">
+          
+          <h1>My Profile</h1>
+          <div class="box">
+             <h2>Basic Information</h2>
+             <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon" (click)="openUserModal()">
+                <i class="el-icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                      <path fill="currentColor" d="M832 512a32 32 0 1 1 64 0v352a32 32 0 0 1-32 32H160a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h352a32 32 0 0 1 0 64H192v640h640V512z"></path>
+                      <path fill="currentColor" d="m469.952 554.24 52.8-7.552L847.104 222.4a32 32 0 1 0-45.248-45.248L477.44 501.44l-7.552 52.8zm422.4-422.4a96 96 0 0 1 0 135.808l-331.84 331.84a32 32 0 0 1-18.112 9.088L436.8 623.68a32 32 0 0 1-36.224-36.224l15.104-105.6a32 32 0 0 1 9.024-18.112l331.904-331.84a96 96 0 0 1 135.744 0z"></path>
+                   </svg>
+                </i>
+                <span class="">Edit</span>
+             </button>
+             <div class="el-descriptions box-user-edit">
+                
+                <div class="el-descriptions__body">
+                   <table class="el-descriptions__table">
+                      <tbody>
+                         <tr>
+                            <td class="el-descriptions__cell" colspan="1"><span class="el-descriptions__label">User ID</span><span class="el-descriptions__content"><span class="box-user-edit-name">betx365stg</span></span></td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+             <hr>
+             <div class="box-data">
+                <div class="el-descriptions">
+                   
+                   <div class="el-descriptions__body">
+                      <table class="el-descriptions__table">
+                         <tbody>
+                            <tr>
+                               <td class="el-descriptions__cell"><span class="el-descriptions__label">Username</span><span class="el-descriptions__content">betx365stg</span></td>
+                               <td class="el-descriptions__cell"><span class="el-descriptions__label">Account Type</span><span class="el-descriptions__content"><span class="user-badge user-badge-ma">MA</span><span class="user-badge-full">Master Agent</span></span></td>
+                               <td class="el-descriptions__cell"><span class="el-descriptions__label">Status</span><span class="el-descriptions__content"><span class="user-stage user-stage-active"><i></i> Active</span></span></td>
+                            </tr>
+                            <tr>
+                               <td class="el-descriptions__cell" colspan="3"><span class="el-descriptions__label">Currency</span><span class="el-descriptions__content"><span class="currency">AUD</span><span class="currency">CNY</span><span class="currency">HKD</span><span class="currency">INR</span><span class="currency">LKR</span><span class="currency">MYR</span><span class="currency">NPR</span><span class="currency">PKR</span><span class="currency">THB</span></span></td>
+                            </tr>
+                            <tr>
+                               <td class="el-descriptions__cell"><span class="el-descriptions__label">Created Time</span><span class="el-descriptions__content">17-06-2023 13:13:24</span></td>
+                               <td class="el-descriptions__cell" colspan="2"><span class="el-descriptions__label">Last Login</span><span class="el-descriptions__content">09-04-2025 17:47:42</span></td>
+                            </tr>
+                         </tbody>
+                      </table>
+                   </div>
+                </div>
+                
+             </div>
+          </div>
+          <div class="box">
+             <h2>Product Information</h2>
+             <div class="el-tabs el-tabs--top el-tabs--card">
+                <div class="el-tabs__header is-top">
+                   
+                   <div class="el-tabs__nav-wrap is-scrollable is-top">
+                       
+                      <div class="el-tabs__nav-scroll">
+                         <div class="el-tabs__nav is-top" role="tablist" style="transform: translateX(0px);">
+                            
+                            <div class="el-tabs__item is-top" id="tab-BINGO" (click)="setGameTab('tab-BINGO')" [ngClass]="livegameTab == 0? 'is-active' : ''" aria-controls="pane-BINGO" role="tab" aria-selected="true" tabindex="0">
+                               BINGO
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-EGAME" (click)="setGameTab('tab-EGAME')" [ngClass]="livegameTab == 1? 'is-active' : ''" aria-controls="pane-EGAME" role="tab" aria-selected="false" tabindex="-1">
+                               EGAME
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-ESPORTS" (click)="setGameTab('tab-ESPORTS')" [ngClass]="livegameTab == 2? 'is-active' : ''" aria-controls="pane-ESPORTS" role="tab" aria-selected="false" tabindex="-1">
+                               ESPORTS
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-FH" (click)="setGameTab('tab-FH')" [ngClass]="livegameTab == 3? 'is-active' : ''" aria-controls="pane-FH" role="tab" aria-selected="false" tabindex="-1">
+                               FISH
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-LIVE" (click)="setGameTab('tab-LIVE')" [ngClass]="livegameTab == 4? 'is-active' : ''" aria-controls="pane-LIVE" role="tab" aria-selected="false" tabindex="-1">
+                               LIVE
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-LOTTO" (click)="setGameTab('tab-LOTTO')" [ngClass]="livegameTab == 5? 'is-active' : ''" aria-controls="pane-LOTTO" role="tab" aria-selected="false" tabindex="-1">
+                               LOTTO
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-SLOT" (click)="setGameTab('tab-SLOT')" [ngClass]="livegameTab == 6? 'is-active' : ''" aria-controls="pane-SLOT" role="tab" aria-selected="false" tabindex="-1">
+                               SLOT
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-TABLE" (click)="setGameTab('tab-TABLE')" [ngClass]="livegameTab == 7? 'is-active' : ''" aria-controls="pane-TABLE" role="tab" aria-selected="false" tabindex="-1">
+                               TABLE
+                            </div>
+                            <div class="el-tabs__item is-top" id="tab-VIRTUAL" (click)="setGameTab('tab-VIRTUAL')" [ngClass]="livegameTab == 8? 'is-active' : ''" aria-controls="pane-VIRTUAL" role="tab" aria-selected="false" tabindex="-1">
+                               VIRTUAL
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="el-tabs__content">
+                   <div id="pane-BINGO" class="el-tab-pane" role="tabpanel" aria-hidden="false" aria-labelledby="tab-BINGO" *ngIf="livegameTab == 0">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-left" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_1_column_1" width="120">
+                                     <col name="el-table_1_column_2" width="780">
+                                     <col name="el-table_1_column_3" width="80">
+                                     <col name="el-table_1_column_4" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_1_column_1 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_1_column_2 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_1_column_3 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_1_column_4 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_1_column_1" width="120">
+                                              <col name="el-table_1_column_2" width="780">
+                                              <col name="el-table_1_column_3" width="80">
+                                              <col name="el-table_1_column_4" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_1_column_1 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       YELLOWBAT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_1_column_2 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_1_column_3 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_1_column_4 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div> 
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-EGAME" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-EGAME" *ngIf="livegameTab == 1">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_2_column_5" width="120">
+                                     <col name="el-table_2_column_6" width="780">
+                                     <col name="el-table_2_column_7" width="80">
+                                     <col name="el-table_2_column_8" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_2_column_5 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_2_column_6 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_2_column_7 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_2_column_8 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_2_column_5" width="120">
+                                              <col name="el-table_2_column_6" width="780">
+                                              <col name="el-table_2_column_7" width="80">
+                                              <col name="el-table_2_column_8" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_2_column_5 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       FC
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_6 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_7 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_8 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_2_column_5 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JDB
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_6 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_7 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_8 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_2_column_5 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PLAY8
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_6 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_7 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_8 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_2_column_5 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PP
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_6 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_7 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_8 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_2_column_5 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       SPRIBE
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_6 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_7 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_8 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_2_column_5 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       YL
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_6 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_7 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_2_column_8 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-ESPORTS" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-ESPORTS" *ngIf="livegameTab == 2">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_3_column_9" width="120">
+                                     <col name="el-table_3_column_10" width="780">
+                                     <col name="el-table_3_column_11" width="80">
+                                     <col name="el-table_3_column_12" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_3_column_9 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_3_column_10 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_3_column_11 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_3_column_12 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_3_column_9" width="120">
+                                              <col name="el-table_3_column_10" width="780">
+                                              <col name="el-table_3_column_11" width="80">
+                                              <col name="el-table_3_column_12" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_3_column_9 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       E1SPORT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_3_column_10 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_3_column_11 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_3_column_12 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-FH" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-FH" *ngIf="livegameTab == 3">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_4_column_13" width="120">
+                                     <col name="el-table_4_column_14" width="780">
+                                     <col name="el-table_4_column_15" width="80">
+                                     <col name="el-table_4_column_16" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_4_column_13 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_4_column_14 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_4_column_15 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_4_column_16 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_4_column_13" width="120">
+                                              <col name="el-table_4_column_14" width="780">
+                                              <col name="el-table_4_column_15" width="80">
+                                              <col name="el-table_4_column_16" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       FASTSPIN
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       FC
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JDB
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JILI
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PLAY8
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       SPADE
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       YELLOWBAT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_4_column_13 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       YL
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_14 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_15 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_4_column_16 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-LIVE" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-LIVE" *ngIf="livegameTab == 4">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_5_column_17" width="120">
+                                     <col name="el-table_5_column_18" width="780">
+                                     <col name="el-table_5_column_19" width="80">
+                                     <col name="el-table_5_column_20" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_5_column_17 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_5_column_18 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_5_column_19 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_5_column_20 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_5_column_17" width="120">
+                                              <col name="el-table_5_column_18" width="780">
+                                              <col name="el-table_5_column_19" width="80">
+                                              <col name="el-table_5_column_20" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       BG
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       DREAMGAMING
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       EVOLUTION
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       HORSEBOOK
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       HOTROAD
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PP
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       SV388
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_5_column_17 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       VIACASINO
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_18 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_19 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_5_column_20 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <button aria-disabled="false" type="button" class="el-button btn--xs btn--icon">
+                                                          <i class="el-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                                                                <path fill="currentColor" d="m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"></path>
+                                                             </svg>
+                                                          </i>
+                                                          <span class="">View</span>
+                                                       </button>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-LOTTO" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-LOTTO" *ngIf="livegameTab == 5">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_6_column_21" width="120">
+                                     <col name="el-table_6_column_22" width="780">
+                                     <col name="el-table_6_column_23" width="80">
+                                     <col name="el-table_6_column_24" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_6_column_21 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_6_column_22 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_6_column_23 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_6_column_24 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_6_column_21" width="120">
+                                              <col name="el-table_6_column_22" width="780">
+                                              <col name="el-table_6_column_23" width="80">
+                                              <col name="el-table_6_column_24" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_6_column_21 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       VRLOTTO
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_6_column_22 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_6_column_23 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_6_column_24 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-SLOT" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-SLOT" *ngIf="livegameTab == 6">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_7_column_25" width="120">
+                                     <col name="el-table_7_column_26" width="780">
+                                     <col name="el-table_7_column_27" width="80">
+                                     <col name="el-table_7_column_28" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_7_column_25 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_7_column_26 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_7_column_27 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_7_column_28 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_7_column_25" width="120">
+                                              <col name="el-table_7_column_26" width="780">
+                                              <col name="el-table_7_column_27" width="80">
+                                              <col name="el-table_7_column_28" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       DRAGOONSOFT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       FASTSPIN
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       FC
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       ILOVEU
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JDB
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JILI
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JOKER
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       KINGMIDAS
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       LADYLUCK
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       NETENT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PG
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PLAY8
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PP
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       RT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       SPADE
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_7_column_25 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       YELLOWBAT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_26 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_27 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_7_column_28 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-TABLE" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-TABLE" *ngIf="livegameTab == 7">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_8_column_29" width="120">
+                                     <col name="el-table_8_column_30" width="780">
+                                     <col name="el-table_8_column_31" width="80">
+                                     <col name="el-table_8_column_32" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_8_column_29 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_8_column_30 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_8_column_31 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_8_column_32 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_8_column_29" width="120">
+                                              <col name="el-table_8_column_30" width="780">
+                                              <col name="el-table_8_column_31" width="80">
+                                              <col name="el-table_8_column_32" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_8_column_29 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       JILI
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_30 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_31 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_32 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_8_column_29 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       KINGMIDAS
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_30 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">AUD</div>
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_31 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_32 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_8_column_29 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       LUCKYPOKER
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_30 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_31 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_32 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_8_column_29 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       NETENT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_30 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_31 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_32 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_8_column_29 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       PG
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_30 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_31 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_32 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                              <tr class="el-table__row el-table__row--striped">
+                                                 <td class="el-table_8_column_29 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       RT
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_30 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">HKD</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">LKR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_31 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_8_column_32 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                   <div id="pane-VIRTUAL" class="el-tab-pane" role="tabpanel" aria-hidden="true" aria-labelledby="tab-VIRTUAL" *ngIf="livegameTab == 8">
+                      <div class="el-table--fit el-table--striped el-table--scrollable-x el-table--enable-row-hover el-table--enable-row-transition el-table el-table--layout-fixed is-scrolling-right" data-prefix="el" style="width: 100%;">
+                         <div class="el-table__inner-wrapper">
+                            <div class="hidden-columns">
+                               <div></div>
+                               <div></div>
+                               <div></div>
+                               
+                               <div></div>
+                            </div>
+                            <div class="el-table__header-wrapper">
+                               <table class="el-table__header" border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                                  <colgroup>
+                                     <col name="el-table_9_column_33" width="120">
+                                     <col name="el-table_9_column_34" width="780">
+                                     <col name="el-table_9_column_35" width="80">
+                                     <col name="el-table_9_column_36" width="120">
+                                  </colgroup>
+                                  <thead class="">
+                                     <tr class="">
+                                        <th class="el-table_9_column_33 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Platform
+                                           </div>
+                                        </th>
+                                        <th class="el-table_9_column_34 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Supported Currency
+                                           </div>
+                                        </th>
+                                        <th class="el-table_9_column_35 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              My Pt Allow
+                                           </div>
+                                        </th>
+                                        <th class="el-table_9_column_36 is-leaf el-table__cell" colspan="1" rowspan="1">
+                                           <div class="cell">
+                                              Bet Limit
+                                           </div>
+                                        </th>
+                                     </tr>
+                                  </thead>
+                               </table>
+                            </div>
+                            <div class="el-table__body-wrapper">
+                               <div class="el-scrollbar">
+                                  <div class="el-scrollbar__wrap el-scrollbar__wrap--hidden-default">
+                                     <div class="el-scrollbar__view" style="display: inline-block; vertical-align: middle;">
+                                        <table class="el-table__body" cellspacing="0" cellpadding="0" border="0" style="table-layout: fixed; width: 100%;">
+                                           <colgroup>
+                                              <col name="el-table_9_column_33" width="120">
+                                              <col name="el-table_9_column_34" width="780">
+                                              <col name="el-table_9_column_35" width="80">
+                                              <col name="el-table_9_column_36" width="120">
+                                           </colgroup>
+                                           
+                                           <tbody>
+                                              <tr class="el-table__row">
+                                                 <td class="el-table_9_column_33 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       SABA
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_9_column_34 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       
+                                                       <div class="currency">CNY</div>
+                                                       <div class="currency">INR</div>
+                                                       <div class="currency">MYR</div>
+                                                       <div class="currency">NPR</div>
+                                                       <div class="currency">PKR</div>
+                                                       <div class="currency">THB</div>
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_9_column_35 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       100% 
+                                                    </div>
+                                                 </td>
+                                                 <td class="el-table_9_column_36 el-table__cell" rowspan="1" colspan="1">
+                                                    <div class="cell">
+                                                       <span>-</span>
+                                                    </div>
+                                                 </td>
+                                              </tr>
+                                           </tbody>
+                                        </table>
+                                        
+                                     </div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-horizontal" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateX(0%);"></div>
+                                  </div>
+                                  <div class="el-scrollbar__bar is-vertical" style="display: none;">
+                                     <div class="el-scrollbar__thumb" style="transform: translateY(0%);"></div>
+                                  </div>
+                               </div>
+                            </div>
+                            
+                         </div>
+                         <div class="el-table__column-resize-proxy" style="display: none;"></div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div> 
+
+
+ <div class="el-overlay" style="z-index: 2013;" *ngIf="isModalOpen">
+    <div role="dialog" aria-modal="true" aria-label="Edit My Profile" aria-describedby="el-id-2714-83" class="el-overlay-dialog">
+       <div class="el-dialog el-dialog--center" tabindex="-1">
+          <header class="el-dialog__header">
+             <span role="heading" class="el-dialog__title">Edit My Profile</span>
+             <button aria-label="Close this dialog" class="el-dialog__headerbtn" type="button" (click)="closeUserModal()">
+                <i class="el-icon el-dialog__close">
+                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+                      <path fill="currentColor" d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"></path>
+                   </svg>
+                </i>
+             </button>
+          </header>
+          <div id="el-id-2714-83" class="el-dialog__body">
+             <form class="el-form el-form--default el-form--label-right">
+                <div class="edit-form-user"><span class="edit-form-user-title">User ID</span><span class="edit-form-user-id">betx365stg</span><span class="user-badge user-badge-ma">MA</span></div>
+                <div class="el-form-item is-required is-no-asterisk asterisk-left">
+                   <label id="el-id-2714-85" for="el-id-2714-88" class="el-form-item__label">Password</label>
+                   <div class="el-form-item__content">
+                      <div class="el-input el-input--suffix">
+                         
+                         <div class="el-input__wrapper">
+                            <input class="el-input__inner" modelmodifiers="[object Object]" maxlength="40" type="password" autocomplete="off" tabindex="0" id="el-id-2714-88"><!-- suffix slot -->
+                            <span class="el-input__suffix">
+                               <span class="el-input__suffix-inner">
+                                  
+                               </span>
+                            </span>
+                         </div>
+                         
+                      </div>
+                   </div>
+                </div>
+                <div class="el-form-item is-required is-no-asterisk asterisk-left">
+                   <label id="el-id-2714-86" for="el-id-2714-89" class="el-form-item__label">New Password</label>
+                   <div class="el-form-item__content">
+                      <div class="el-input el-input--suffix">
+                         
+                         <div class="el-input__wrapper">
+                            <input class="el-input__inner" modelmodifiers="[object Object]" maxlength="40" type="password" autocomplete="off" tabindex="0" placeholder="Min 8 characters" id="el-id-2714-89"><!-- suffix slot -->
+                            <span class="el-input__suffix">
+                               <span class="el-input__suffix-inner">
+                                  
+                               </span>
+                            </span>
+                         </div>
+                         
+                      </div>
+                   </div>
+                </div>
+                <div class="el-form-item is-no-asterisk asterisk-left">
+                   <label id="el-id-2714-87" for="el-id-2714-90" class="el-form-item__label">Confirm Password</label>
+                   <div class="el-form-item__content">
+                      <div class="el-input el-input--suffix">
+                         
+                         <div class="el-input__wrapper">
+                            <input class="el-input__inner" modelmodifiers="[object Object]" maxlength="40" type="password" autocomplete="off" tabindex="0" id="el-id-2714-90"><!-- suffix slot -->
+                            <span class="el-input__suffix">
+                               <span class="el-input__suffix-inner">
+                                  
+                               </span>
+                            </span>
+                         </div>
+                         
+                      </div>
+                   </div>
+                </div>
+                
+                <div class="dialog-footer">
+                   <button aria-disabled="false" type="button" class="el-button btn--s btn--border" (click)="closeUserModal()">
+                      <span class="">Cancel</span>
+                   </button>
+                   <button aria-disabled="false" type="button" class="el-button btn--s btn--gold">
+                      <span class="">Save</span>
+                   </button>
+                </div>
+             </form>
+          </div>
+          
+       </div>
+    </div>
+ </div>

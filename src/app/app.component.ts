@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'awc';
+  isSidebarOpen = true;
+  toggleSidebar(): void {
+    this.isSidebarOpen = !this.isSidebarOpen; 
+  }
 }
