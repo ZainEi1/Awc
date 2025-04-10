@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CreateMemberComponent } from './components/create-member/create-member.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CreateMemberComponent } from './components/create-member/create-member.
     HeaderComponent,
     SidebarComponent,
     HomeComponent,
-    CreateMemberComponent
+    CreateMemberComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

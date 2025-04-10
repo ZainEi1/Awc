@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,12 @@ export class AppComponent {
   toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen; 
   }
+  constructor(private route:Router){
+    
+  } 
+  hideSidebarHeader(): boolean {
+    const currentUrl = this.route.url;
+    return currentUrl === '/login' || currentUrl.startsWith('/auth/login');
+  }
+  
 }

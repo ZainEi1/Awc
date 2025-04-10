@@ -1,24 +1,32 @@
-<section class="el-container is-vertical">
-  <app-header></app-header>
-  <section class="el-container">
-    <label class="el-checkbox menuController" [ngClass]="isSidebarOpen ? 'checkboxOpen' : 'checkboxClose'">
-      <span class="el-checkbox__input">
-        <input
-          class="el-checkbox__original"
-          type="checkbox"
-          [checked]="isSidebarOpen"
-          (click)="toggleSidebar(); $event.stopPropagation();"
-          aria-hidden="false"
-        />
-        <span class="el-checkbox__inner"></span>
-      </span>
-      <span class="el-checkbox__label">Click</span>
-    </label>
-    <app-sidebar *ngIf="isSidebarOpen"></app-sidebar>
-    <div class="wrapper">
-      <main class="el-main" [ngClass]="isSidebarOpen ? '' : 'isExtend'">
-        <router-outlet></router-outlet> 
-      </main>
-    </div>
+<ng-container *ngIf="!hideSidebarHeader(); else loginLayout">
+  <section class="el-container is-vertical">
+    <app-header></app-header>
+    <section class="el-container">
+      <label class="el-checkbox menuController" [ngClass]="isSidebarOpen ? 'checkboxOpen' : 'checkboxClose'">
+        <span class="el-checkbox__input">
+          <input
+            class="el-checkbox__original"
+            type="checkbox"
+            [checked]="isSidebarOpen"
+            (click)="toggleSidebar(); $event.stopPropagation();"
+            aria-hidden="false"
+          />
+          <span class="el-checkbox__inner"></span>
+        </span>
+        <span class="el-checkbox__label">Click</span>
+      </label>
+
+      <app-sidebar *ngIf="isSidebarOpen"></app-sidebar>
+
+      <div class="wrapper">
+        <main class="el-main" [ngClass]="isSidebarOpen ? '' : 'isExtend'">
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+    </section>
   </section>
-</section>
+</ng-container>
+
+<ng-template #loginLayout>
+  <router-outlet></router-outlet>
+</ng-template>
